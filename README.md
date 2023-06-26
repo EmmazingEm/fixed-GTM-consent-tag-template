@@ -18,7 +18,7 @@
 9. Add a Checkbox fielde named `ads_data_redaction`. Make its display name`Redact Ads Data`.
 ### Setting Up the Code
 1. Navigate to the Code tab.
-2. Copy and paste this code.
+2. Copy and paste [this code](template_code.md).
 3. Update the `COOKIE_NAME` constant's value so it matches the name of the cookie storing your consent data.
 4. If you have a Google developer ID and want to utilize it, uncomment the line shown in the picture and insert your ID.
 ### Setting Up the Permissions
@@ -31,3 +31,5 @@
 2. Set it to trigger on Consent Initialization - All Pages.
 3. In the tag's Settings table, enter a comma-separated list of all the consent types in their appropriate Denied/Granted columns. This will be the site's default consent state for any given region.
 4. To make region-specific defaults, add a new row and put the region's name in the Region column and fill out the Granted/Denied columns as instructed in step 3.
+## Special Note Regarding Regions
+I haven't encountered a client who asked for region-specific policies. As such, this feature is not yet tested. Please submit an issue if you encounter any bugs.
