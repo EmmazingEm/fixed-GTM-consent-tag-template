@@ -1,6 +1,6 @@
 # fixed-GTM-consent-tag-template
 [Go here](https://developers.google.com/tag-platform/tag-manager/templates/consent-apis) to see Google's official documentation on how to set up this tag.
-[Go here]() for a detailed explanation of why it doesn't work and you should use this version, instead.
+[Go here](https://emmadoesdata.com/an-easy-consent-tag-template-that-actually-works/) for a detailed explanation of why it doesn't work and you should use this version, instead.
 ## Assumptions
 1. The cookie will always be a string formatted as such: `{adConsentGranted: '<insert_status>', analyticsConsentGranted: '<insert_status>', functionalityConsentGranted: '<insert_status>', personalizationConsentGranted: '<insert_status>', securityConsentGranted: '<insert-status>'}`.  If this needs to change, update the `parseSettings` function to reflect your preferred ordering.
 2. You understand this tag will only allow you to control how consent status affects which of your GTM tags fire. Implementing this solution does not guarantee compliance with GDPR, CCPA, or any other privacy law.
