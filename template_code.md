@@ -53,7 +53,6 @@ function parseSettings (x) {
  * directly correspond to Google consent types.
  */
 const onUserConsent = (consent) => {
-  log(typeof consent);
   const consentModeStates = parseSettings (consent);
   updateConsentState(consentModeStates);
 };
@@ -73,12 +72,9 @@ const main = (data) => {
   // types. If it does, run onUserConsent().
   const userSettings = getCookieValues(COOKIE_NAME);
   if (userSettings !== 'undefined') {
-    log('made it');
     const settings = parseSettings (userSettings);
-    log('user:', settings);
     updateConsentState(settings);
   } else {
-    log('oops');
     // Otherwise, set default consent state(s)
     data.defaultSettings.forEach(settings => {
     const defaultData = parseCommandData(settings);
